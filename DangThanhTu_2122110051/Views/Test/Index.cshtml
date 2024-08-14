@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*@{ var myMessage = "Hello World"; }
+
+<p>The value of myMessage is: @myMessage</p>
+
+@{
+    var greeting = "Welcome to our site!";
+    var weekDay = DateTime.Now.DayOfWeek;
+    var greetingMessage = greeting + " Here in Houston it is: " + weekDay;
+}
+<p>The greeting is: @greetingMessage</p>*@
+@*<p>========================================================</p>*@
+
+@*@for (var i = 10; i < 21; i++)
+    {<p>Line @i</p>}*@
+
+@*<p>========================================================</p>*@
+
+@*@{
+        var i = 0;
+        while (i < 5)
+        {
+            i += 1;
+            <p>Line @i</p>
+        }
+    }*@
+
+@*<p>========================================================</p>*@
+
+@*@{
+        string[] members = { "Jani", "Hege", "Kai", "Jim" };
+        int i = Array.IndexOf(members, "Kai") + 1;
+        int len = members.Length;
+        string x = members[2 - 1];
+    }
+    <html>
+    <body>
+        <h3>Members</h3>
+        @foreach (var person in members)
+        {
+            <p>@person</p>
+        }
+        <p>The number of names in Members are @len</p>
+        <p>The person at position 2 is @x</p>
+        <p>Kai is now in position @i</p>
+    </body>
+    </html>*@
+@*<p>========================================================</p>*@
+
+@*@{ var price = 20;}
+<html>
+<body>
+    @if (price > 30)
+    {
+        <p>The price is too high.</p>
+    }
+    else
+    {
+        <p>The price is OK.</p>
+    }
+</body>
+</html>*@
+
+
+@*<p>========================================================</p>*@
+@{
+        var weekday = DateTime.Now.DayOfWeek;
+        var day = weekday.ToString();
+        var message = "";
+    }
+    <html>
+    <body>
+        @switch (day)
+        {
+            case "Monday":
+                message = "This is the first weekday.";
+                break;
+            case "Thursday":
+                message = "Only one day before weekend.";
+                break;
+            case "Friday":
+                message = "Tomorrow is weekend!";
+                break;
+            default:
+                message = "Today is " + day;
+                break;
+        }
+        <p>@message</p>
+    </body>
+    </html>

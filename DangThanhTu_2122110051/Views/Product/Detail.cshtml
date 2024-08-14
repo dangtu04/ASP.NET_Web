@@ -1,0 +1,204 @@
+﻿@model DangThanhTu_2122110051.Context.Product
+
+@{
+    ViewBag.Title = "Product-Detail";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#addtocart").click(function () {
+            var model = {
+                "Id": @Html.Raw(Model.Id),
+                "Quantity": $("#ipQuantity").val()
+            };
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddToCart", "Cart")',
+                data: JSON.stringify(model),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function () {
+                    alert("Thêm giỏ hàng thành công!");
+                    $('#CartCount').text(function (i, oldText) {
+                        return parseInt(oldText) + parseInt(model.Quantity);
+                    });
+                },
+                error: function () {
+                    alert("Lỗi trong khi thêm vào giỏ hàng!");
+                }
+            });
+            return false;
+        });
+
+        // Tăng số lượng sản phẩm
+        $('#button-plus').on('click', function () {
+            var quantityInput = $('#ipQuantity');
+            var currentValue = parseInt(quantityInput.val());
+            quantityInput.val(currentValue + 1);
+        });
+
+        // Giảm số lượng sản phẩm
+        $('#button-minus').on('click', function () {
+            var quantityInput = $('#ipQuantity');
+            var currentValue = parseInt(quantityInput.val());
+            if (currentValue > 1) {
+                quantityInput.val(currentValue - 1);
+            }
+        });
+    });
+</script>
+
+<section class="py-3 bg-light">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Chi tiết sản phẩm</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+        </ol>
+    </div>
+</section>
+
+<section class="section-content bg-white padding-y">
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-6">
+                <div class="card">
+                    <article class="gallery-wrap">
+                        <div class="img-big-wrap">
+                            <div><a href="#"><img src="~/Content/images/items/@Model.Image" class="img-fluid"></a></div>
+                        </div>
+                        <div class="thumbs-wrap">
+                            <a href="#" class="item-thumb"><img src="~/Content/images/items/15.jpg"></a>
+                            <a href="#" class="item-thumb"><img src="~/Content/images/items/15-1.jpg"></a>
+                            <a href="#" class="item-thumb"><img src="~/Content/images/items/15-2.jpg"></a>
+                            <a href="#" class="item-thumb"><img src="~/Content/images/items/15-1.jpg"></a>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+            <main class="col-md-6">
+                <article class="product-info-aside">
+                    <h2 class="title mt-3">@Model.Name</h2>
+                    <div class="rating-wrap my-3">
+                        <ul class="rating-stars">
+                            <li style="width:80%" class="stars-active">
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <small class="label-rating text-muted">132 reviews</small>
+                        <small class="label-rating text-success"><i class="fa fa-clipboard-check"></i> 154 orders</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <var class="price h4">@Model.Price.ToString("#,##0") VND</var>
+                        <span class="text-muted">USD 562.65 incl. VAT</span>
+                    </div>
+
+                    <dl class="row">
+                        <dt class="col-sm-3">Manufacturer</dt>
+                        <dd class="col-sm-9"><a href="#">Great textile Ltd.</a></dd>
+                        <dt class="col-sm-3">Article number</dt>
+                        <dd class="col-sm-9">596 065</dd>
+                        <dt class="col-sm-3">Guarantee</dt>
+                        <dd class="col-sm-9">2 year</dd>
+                        <dt class="col-sm-3">Delivery time</dt>
+                        <dd class="col-sm-9">3-4 days</dd>
+                        <dt class="col-sm-3">Availability</dt>
+                        <dd class="col-sm-9">In Stock</dd>
+                    </dl>
+
+                    <div class="form-row mt-4">
+                        <div class="form-group col-md flex-grow-0">
+                            <div class="input-group mb-3 input-spinner">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-minus" aria-label="Giảm số lượng">-</button>
+                                </div>
+                                <input type="text" id="ipQuantity" class="form-control" value="1" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-plus" aria-label="Tăng số lượng">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md">
+                            <a href="#" id="addtocart" class="btn btn-primary">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="text">Thêm vào giỏ hàng</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+</section>
+
+<section class="section-name padding-y bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h5 class="title-description">Description</h5>
+                @Model.Description
+            </div>
+            <aside class="col-md-4">
+                <div class="box">
+                    <h5 class="title-description">Files</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <h5 class="title-description">Videos</h5>
+                    <article class="media mb-3">
+                        <a href="#"><img class="img-sm mr-3" src="~/Content/images/posts/@Model.Image"></a>
+                        <div class="media-body">
+                            <h6 class="mt-0"><a href="#">How to use this item</a></h6>
+                            <p class="mb-2"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin </p>
+                        </div>
+                    </article>
+                    <article class="media mb-3">
+                        <a href="#"><img class="img-sm mr-3" src="~/Content/images/posts/2.jpg"></a>
+                        <div class="media-body">
+                            <h6 class="mt-0"><a href="#">New tips and tricks</a></h6>
+                            <p class="mb-2"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin </p>
+                        </div>
+                    </article>
+                    <article class="media mb-3">
+                        <a href="#"><img class="img-sm mr-3" src="~/Content/images/posts/1.jpg"></a>
+                        <div class="media-body">
+                            <h6 class="mt-0"><a href="#">New tips and tricks</a></h6>
+                            <p class="mb-2"> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin </p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="padding-y-lg bg-light border-top">
+    <div class="container">
+        <p class="pb-2 text-center">Delivering the latest product trends and industry news straight to your inbox</p>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-4 col-sm-6">
+                <form class="form-row">
+                    <div class="col-8">
+                        <input class="form-control" placeholder="Your Email" type="email">
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-block btn-warning"> <i class="fa fa-envelope"></i> Subscribe </button>
+                    </div>
+                </form>
+                <small class="form-text">We’ll never share your email address with a third-party.</small>
+            </div>
+        </div>
+    </div>
+</section>

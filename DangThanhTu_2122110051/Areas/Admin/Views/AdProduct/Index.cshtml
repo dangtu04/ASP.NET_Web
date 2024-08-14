@@ -1,0 +1,87 @@
+﻿@model IEnumerable<DangThanhTu_2122110051.Context.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div style="padding: 0 5px 0 5px;">
+
+    <h2>Tất cả sản phẩm</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success btn-sm" })
+    </p>
+    <table class="table">
+        <tr>
+            <th style="width:100px">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sale_price)
+            </th>
+            <th style="width: 200px;">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th style="width:100px">
+                @Html.DisplayNameFor(model => model.Detail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Brand.Name)*@Brand
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.Category.Name)*@Category
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="width:100px">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sale_price)
+                </td>
+                <td style="width: 200px;">
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <img src="~/Content/images/items/@Html.DisplayFor(modelItem => item.Image)" alt="Alternate Text" style="width:150px" />
+                </td>
+                <td style="width:100px;">
+                    @Html.DisplayFor(modelItem => item.Detail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info btn-sm" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

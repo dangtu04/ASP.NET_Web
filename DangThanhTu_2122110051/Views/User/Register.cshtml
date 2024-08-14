@@ -1,0 +1,89 @@
+﻿@model DangThanhTu_2122110051.Context.User
+
+<section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:520px; margin-top:40px;">
+        <article class="card-body">
+            <header class="mb-4"><h4 class="card-title">Sign up</h4></header>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-row">
+                    <div class="col form-group">
+                        @Html.LabelFor(model => model.FirstName, "First name")
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First name" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col form-group">
+                        @Html.LabelFor(model => model.LastName, "Last name")
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last name" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, "Email")
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div>
+                        <label class="custom-control custom-radio custom-control-inline">
+                            @Html.RadioButtonFor(model => model.Gender, "Male", new { @class = "custom-control-input" })
+                            <span class="custom-control-label"> Male </span>
+                        </label>
+                        <label class="custom-control custom-radio custom-control-inline">
+                            @Html.RadioButtonFor(model => model.Gender, "Female", new { @class = "custom-control-input" })
+                            <span class="custom-control-label"> Female </span>
+                        </label>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Phone, "Phone")
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = "Phone" } })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Image, "Image")
+                    @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control", placeholder = "Image" } })
+                    @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Address, "Address")
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "Address" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+
+                @Html.HiddenFor(model => model.Role, new { Value = "custom" })
+                @Html.HiddenFor(model => model.Status, new { Value = "1" })
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Password, "Create password")
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" value="Create" class="btn btn-primary btn-block"> Register </button>
+                </div>
+
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked="">
+                        <div class="custom-control-label"> I am agree with <a href="#">terms and conditions</a> </div>
+                    </label>
+                </div>
+            }
+        </article>
+    </div>
+    <p class="text-center mt-4">Have an account? <a href="#">Log In</a></p>
+</section>

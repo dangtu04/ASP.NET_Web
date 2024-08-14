@@ -1,0 +1,64 @@
+﻿@model DangThanhTu_2122110051.Context.Category
+
+<div>
+    <h4>Category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sort_order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sort_order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_popular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            <img src="~/Content/images/categories/@Model.Image" alt="Category Image" style="width:150px" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category2.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category2.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary btn-sm" }) |
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-info btn-sm" })
+</p>

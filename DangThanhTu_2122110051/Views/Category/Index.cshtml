@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DangThanhTu_2122110051.Context.Category>
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+    <div class="container">
+
+        <nav class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md col-6">
+                    <figure class="card-product-grid card-sm">
+                        <a href="@Url.Action("ProductByCategoryId", "Category", new { id = item.Id })" class="img-wrap">
+                            <img src="~/Content/images/categories/@item.Image">
+                        </a>
+                        <div class="text-wrap p-3">
+                            <a href="@Url.Action("ProductByCategoryId", "Category", new { id = item.Id })" class="title">@item.Name</a>
+                        </div>
+                    </figure>
+                </div> <!-- col.// -->
+            }
+
+
+        </nav> <!-- row.// -->
+
+
+    </div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+<!-- ========================= SECTION SUBSCRIBE  ========================= -->
+<section class="padding-y-lg bg-light border-top">
+    <div class="container">
+
+        <p class="pb-2 text-center">Delivering the latest product trends and industry news straight to your inbox</p>
+
+        <div class="row justify-content-md-center">
+            <div class="col-lg-4 col-sm-6">
+                <form class="form-row">
+                    <div class="col-8">
+                        <input class="form-control" placeholder="Your Email" type="email">
+                    </div> <!-- col.// -->
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-block btn-warning"> <i class="fa fa-envelope"></i> Subscribe </button>
+                    </div> <!-- col.// -->
+                </form>
+                <small class="form-text">We’ll never share your email address with a third-party. </small>
+            </div> <!-- col-md-6.// -->
+        </div>
+
+
+    </div>
+</section>
+<!-- ========================= SECTION SUBSCRIBE END// ========================= -->
