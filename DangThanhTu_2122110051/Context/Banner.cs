@@ -11,7 +11,8 @@ namespace DangThanhTu_2122110051.Context
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Banner
     {
         public long Id { get; set; }
@@ -21,5 +22,7 @@ namespace DangThanhTu_2122110051.Context
         public string Position { get; set; }
         public string Description { get; set; }
         public byte Status { get; set; }
+        [NotMapped]
+        public System.Web.HttpPostedFileBase ImageUpload { get; set; }
     }
 }

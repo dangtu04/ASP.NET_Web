@@ -17,10 +17,10 @@ namespace DangThanhTu_2122110051.Context
         public long Id { get; set; }
         public long Order_id { get; set; }
         public long Product_id { get; set; }
-        public double Price { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public int Qty { get; set; }
-        public double Discount { get; set; }
-        public double Amount { get; set; }
+        public Nullable<double> Discount { get; set; }
+        public Nullable<decimal> Amount { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

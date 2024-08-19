@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a48b9022337d4f818a73692db10faa0b" Name="Diagram1">
+      <Diagram DiagramId="1c05aa42aa8748af9330e28820d1d9fc" Name="Diagram1">
         <EntityTypeShape EntityType="AspNetWebModel.Banner" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AspNetWebModel.Brand" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AspNetWebModel.Category" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />

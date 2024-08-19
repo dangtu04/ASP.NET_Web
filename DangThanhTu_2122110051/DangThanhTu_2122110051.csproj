@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -130,9 +136,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\AdCategoryController.cs" />
-    <Compile Include="Areas\Admin\Controllers\AdHomeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\AdProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BannerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BrandController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Context\Banner.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -178,6 +187,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -335,6 +345,7 @@
     <Content Include="Content\images\posts\2.jpg" />
     <Content Include="Content\images\posts\3.jpg" />
     <Content Include="Content\images\posts\4.jpg" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Context\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
@@ -384,7 +395,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\AdHome\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Content\admin\dist\css\adminlte.css.map" />
     <Content Include="Content\admin\dist\css\adminlte.min.css.map" />
     <Content Include="Content\admin\dist\css\alt\adminlte.components.css.map" />
@@ -420,16 +431,31 @@
     <Content Include="Content\admin\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\admin\plugins\jquery\jquery.min.map" />
     <Content Include="Content\admin\plugins\jquery\jquery.slim.min.map" />
-    <Content Include="Areas\Admin\Views\AdProduct\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AdProduct\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\AdProduct\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AdProduct\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\AdProduct\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\AdCategory\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AdCategory\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\AdCategory\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\AdCategory\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\AdCategory\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Brand\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Banner\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
     <EntityDeploy Include="Context\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -476,11 +502,14 @@
     <Content Include="Views\User\Register.cshtml" />
     <Content Include="Views\Category\ProductByCategoryId.cshtml" />
     <Content Include="Views\Product\ListingListGrid.cshtml" />
+    <Content Include="Views\Payment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Content\images\brands\" />
     <Folder Include="Content\images\categories\" />
+    <Folder Include="Content\images\users\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

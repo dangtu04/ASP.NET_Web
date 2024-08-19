@@ -60,12 +60,12 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="User_id" Type="bigint" Nullable="false" />
           <Property Name="Delivery_name" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Delivery_gender" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Delivery_gender" Type="nvarchar" MaxLength="255" />
           <Property Name="Delivery_email" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="Delivery_phone" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="Delivery_address" Type="nvarchar" MaxLength="1000" Nullable="false" />
           <Property Name="Note" Type="nvarchar" MaxLength="1000" />
-          <Property Name="Type" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" />
           <Property Name="Status" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityType Name="Orderdetail">
@@ -75,10 +75,10 @@
           <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Order_id" Type="bigint" Nullable="false" />
           <Property Name="Product_id" Type="bigint" Nullable="false" />
-          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Qty" Type="int" Nullable="false" />
-          <Property Name="Discount" Type="float" Nullable="false" />
-          <Property Name="Amount" Type="float" Nullable="false" />
+          <Property Name="Discount" Type="float" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -309,12 +309,12 @@
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="User_id" Type="Int64" Nullable="false" />
           <Property Name="Delivery_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Delivery_gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Delivery_gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Delivery_email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Delivery_phone" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Delivery_address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="Type" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="Byte" Nullable="false" />
           <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
           <NavigationProperty Name="Orderdetails" Relationship="Self.FK_Orderdetail_Order" FromRole="Order" ToRole="Orderdetail" />
@@ -326,10 +326,10 @@
           <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Order_id" Type="Int64" Nullable="false" />
           <Property Name="Product_id" Type="Int64" Nullable="false" />
-          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Qty" Type="Int32" Nullable="false" />
-          <Property Name="Discount" Type="Double" Nullable="false" />
-          <Property Name="Amount" Type="Double" Nullable="false" />
+          <Property Name="Discount" Type="Double" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
           <NavigationProperty Name="Order" Relationship="Self.FK_Orderdetail_Order" FromRole="Orderdetail" ToRole="Order" />
           <NavigationProperty Name="Product" Relationship="Self.FK_Orderdetail_Product" FromRole="Orderdetail" ToRole="Product" />
         </EntityType>

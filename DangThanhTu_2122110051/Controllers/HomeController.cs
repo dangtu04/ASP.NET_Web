@@ -18,6 +18,7 @@ namespace DangThanhTu_2122110051.Controllers
             HomeModel model = new HomeModel();
             model.ListProduct = db.Products.ToList();
             model.ListCategory = db.Categories.ToList();
+            model.ListBanner = db.Banners.ToList();
             return View(model);
         }
 

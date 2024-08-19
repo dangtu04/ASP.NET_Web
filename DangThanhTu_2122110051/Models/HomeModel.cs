@@ -10,5 +10,6 @@ namespace DangThanhTu_2122110051.Models
     {
         public List<Product> ListProduct { get; set; }
         public List<Category> ListCategory { get; set; }
+        public List<Banner> ListBanner { get; set; }
     }
 }

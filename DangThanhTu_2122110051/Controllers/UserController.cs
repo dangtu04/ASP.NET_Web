@@ -91,6 +91,8 @@ namespace DangThanhTu_2122110051.Controllers
                     Session["FullName"] = data.FirstOrDefault().FirstName + " " + data.FirstOrDefault().LastName;
                     Session["Email"] = data.FirstOrDefault().Email;
                     Session["idUser"] = data.FirstOrDefault().Id;
+                    Session["Phone"] = data.FirstOrDefault().Phone;
+                    Session["Address"] = data.FirstOrDefault().Address;
                     return RedirectToAction("Index", "Home");
                 }
                 else

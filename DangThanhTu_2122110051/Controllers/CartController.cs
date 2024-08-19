@@ -16,7 +16,7 @@ namespace DangThanhTu_2122110051.Controllers
         //    return View();
         //}
 
-        AspNetWebEntities objAspNetWebEntities = new AspNetWebEntities();
+        AspNetWebEntities db = new AspNetWebEntities();
         // GET: Cart
         public ActionResult Index()
         {
@@ -29,7 +29,13 @@ namespace DangThanhTu_2122110051.Controllers
             if (Session["cart"] == null)
             {
                 List<CartModel> cart = new List<CartModel>();
-                cart.Add(new CartModel { Product = objAspNetWebEntities.Products.Find(id), Quantity = quantity });
+                Product product = db.Products.Find(id);
+                cart.Add(new CartModel
+                {
+                    Product = product,
+                    Quantity = quantity,
+                    Price = (decimal)product.Price // Ép kiểu từ double sang decimal
+                });
                 Session["cart"] = cart;
                 Session["count"] = 1;
             }
@@ -46,7 +52,7 @@ namespace DangThanhTu_2122110051.Controllers
                 else
                 {
                     //nếu không tồn tại thì thêm sản phẩm vào giỏ hàng
-                    cart.Add(new CartModel { Product = objAspNetWebEntities.Products.Find(id), Quantity = quantity });
+                    cart.Add(new CartModel { Product = db.Products.Find(id), Quantity = quantity });
                     //Tính lại số sản phẩm trong giỏ hàng
                     Session["count"] = Convert.ToInt32(Session["count"]) + 1;
                 }

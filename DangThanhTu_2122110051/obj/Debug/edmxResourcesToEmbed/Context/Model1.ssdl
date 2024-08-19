@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AspNetWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Banner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Link" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Slug" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Sort_order" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Parent_id" Type="int" Nullable="false" />
+    <Property Name="Sort_order" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Image" Type="nchar" MaxLength="100" />
+    <Property Name="Slug" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="User_id" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Replay_id" Type="int" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="User_id" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Delivery_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Delivery_gender" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Delivery_email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Delivery_phone" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Delivery_address" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Note" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Type" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Price_sale" Type="float" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Image" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Slug" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Detail" Type="text" Nullable="false" />
+    <Property Name="Category_id" Type="int" Nullable="false" />
+    <Property Name="Brand_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AspNetWebModelStoreContainer">
+    <EntitySet Name="Banner" EntityType="Self.Banner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
