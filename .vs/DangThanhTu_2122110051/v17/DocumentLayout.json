@@ -3,11 +3,31 @@
   "WorkspaceRootPath": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\dangthanhtu_2122110051\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\dangthanhtu_2122110051\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\models\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\models\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\views\\home\\content.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\home\\content.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\dangthanhtu_2122110051\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -15,20 +35,12 @@
       "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\dangthanhtu_2122110051\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\dangthanhtu_2122110051\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|d:\\l\u1EADp tr\u00ECnh asp.net\\dangthanhtu_2122110051\\dangthanhtu_2122110051\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|solutionrelative:dangthanhtu_2122110051\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB0B3729-29CF-4146-8CF2-96841A0D158E}|DangThanhTu_2122110051\\DangThanhTu_2122110051.csproj|D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\dangthanhtu_2122110051\\context\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +70,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Payment\\Index.cshtml",
+              "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Views\\Payment\\Index.cshtml",
+              "ToolTip": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Payment\\Index.cshtml",
+              "RelativeToolTip": "DangThanhTu_2122110051\\Views\\Payment\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T01:40:20.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeModel.cs",
+              "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Models\\HomeModel.cs",
+              "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Models\\HomeModel.cs",
+              "ToolTip": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Models\\HomeModel.cs",
+              "RelativeToolTip": "DangThanhTu_2122110051\\Models\\HomeModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T01:39:03.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "CartModel.cs",
+              "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Models\\CartModel.cs",
+              "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Models\\CartModel.cs",
+              "ToolTip": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Models\\CartModel.cs",
+              "RelativeToolTip": "DangThanhTu_2122110051\\Models\\CartModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T01:37:22.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Cart\\Index.cshtml",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Views\\Cart\\Index.cshtml",
@@ -70,12 +121,11 @@
               "RelativeToolTip": "DangThanhTu_2122110051\\Views\\Cart\\Index.cshtml",
               "ViewState": "AQIAAFoAAAAAAAAAAAAAAF4AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T00:58:44.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T00:58:44.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Product\\Detail.cshtml",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Views\\Product\\Detail.cshtml",
@@ -83,12 +133,11 @@
               "RelativeToolTip": "DangThanhTu_2122110051\\Views\\Product\\Detail.cshtml",
               "ViewState": "AQIAAKwAAAAAAAAAAAAUwL4AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T00:49:14.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T00:49:14.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Content.cshtml",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Home\\Content.cshtml",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Views\\Home\\Content.cshtml",
@@ -101,20 +150,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "DangThanhTu_2122110051\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAFMBAAAAAAAAAAAUwEsBAABEAAAA",
+              "ViewState": "AQIAAFMBAAAAAAAAAAAUwFkBAABmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-19T00:40:59.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Views\\Shared\\_Layout.cshtml",
@@ -122,25 +171,24 @@
               "RelativeToolTip": "DangThanhTu_2122110051\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAoAAAAAAAAAAAAUwBgAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-19T00:35:42.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-19T00:35:42.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Controllers\\HomeController.cs",
               "RelativeToolTip": "DangThanhTu_2122110051\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAMwBEAAAAuAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-18T17:33:05.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Controllers\\PaymentController.cs",
@@ -148,12 +196,11 @@
               "RelativeToolTip": "DangThanhTu_2122110051\\Controllers\\PaymentController.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAowCEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T17:33:04.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-18T17:33:04.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Context\\User.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Context\\User.cs",
@@ -165,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Product.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Context\\Product.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Context\\Product.cs",
@@ -177,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Context\\Category.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Context\\Category.cs",
@@ -189,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Brand.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Context\\Brand.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Context\\Brand.cs",
@@ -201,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Banner.cs",
               "DocumentMoniker": "D:\\L\u1EADp tr\u00ECnh Asp.net\\DangThanhTu_2122110051\\DangThanhTu_2122110051\\Context\\Banner.cs",
               "RelativeDocumentMoniker": "DangThanhTu_2122110051\\Context\\Banner.cs",
