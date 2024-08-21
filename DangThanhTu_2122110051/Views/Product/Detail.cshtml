@@ -69,12 +69,12 @@
                         <div class="img-big-wrap">
                             <div><a href="#"><img src="~/Content/images/items/@Model.Image" class="img-fluid"></a></div>
                         </div>
-                        <div class="thumbs-wrap">
+                        @*<div class="thumbs-wrap">
                             <a href="#" class="item-thumb"><img src="~/Content/images/items/15.jpg"></a>
                             <a href="#" class="item-thumb"><img src="~/Content/images/items/15-1.jpg"></a>
                             <a href="#" class="item-thumb"><img src="~/Content/images/items/15-2.jpg"></a>
                             <a href="#" class="item-thumb"><img src="~/Content/images/items/15-1.jpg"></a>
-                        </div>
+                        </div>*@
                     </article>
                 </div>
             </aside>
@@ -100,14 +100,14 @@
 
                     <div class="mb-3">
                         <var class="price h4">@Model.Price.ToString("#,##0") VND</var>
-                        <span class="text-muted">USD 562.65 bao gồm VAT</span>
+                   
                     </div>
 
                     <dl class="row">
-                        <dt class="col-sm-3">Nhà sản xuất</dt>
-                        <dd class="col-sm-9"><a href="#">Great textile Ltd.</a></dd>
+                        <dt class="col-sm-3">Thương hiệu</dt>
+                        <dd class="col-sm-9">@Model.Brand.Name</dd>
                         <dt class="col-sm-3">Mã sản phẩm</dt>
-                        <dd class="col-sm-9">596 065</dd>
+                        <dd class="col-sm-9">@Model.Id</dd>
                         <dt class="col-sm-3">Bảo hành</dt>
                         <dd class="col-sm-9">2 năm</dd>
                         <dt class="col-sm-3">Thời gian giao hàng</dt>
@@ -151,18 +151,18 @@
             </div>
             <aside class="col-md-4">
                 <div class="box">
-                    <h5 class="title-description">Tệp tin</h5>
+                    @*<h5 class="title-description">Tệp tin</h5>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
-                    <h5 class="title-description">Video</h5>
-                    <article class="media mb-3">
+                    <h5 class="title-description">Video</h5>*@
+                    @*<article class="media mb-3">
                         <a href="#"><img class="img-sm mr-3" src="~/Content/images/posts/@Model.Image"></a>
                         <div class="media-body">
                             <h6 class="mt-0"><a href="#">Cách sử dụng sản phẩm này</a></h6>
                             <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin</p>
                         </div>
-                    </article>
+                    </article>*@
                     <article class="media mb-3">
                         <a href="#"><img class="img-sm mr-3" src="~/Content/images/posts/2.jpg"></a>
                         <div class="media-body">

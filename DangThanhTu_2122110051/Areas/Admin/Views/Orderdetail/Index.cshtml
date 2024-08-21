@@ -1,0 +1,68 @@
+﻿@model PagedList.IPagedList<DangThanhTu_2122110051.Context.Orderdetail>
+
+@{
+    ViewBag.Title = "Orderdetail Index";
+}
+
+<h2>Chi tiết đơn hàng</h2>
+
+@using (Html.BeginForm("Index", "Orderdetail", FormMethod.Get))
+{
+    <p>
+        Tìm kiếm theo delivery_name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Tìm kiếm" class="btn btn-primary btn-sm" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Price)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Qty)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Discount)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Amount)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Order.Delivery_name)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Product.Name)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Price)</td>
+            <td>@Html.DisplayFor(modelItem => item.Qty)</td>
+            <td>@Html.DisplayFor(modelItem => item.Discount)</td>
+            <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+            <td>@Html.DisplayFor(modelItem => item.Order.Delivery_name)</td>
+            <td>@Html.DisplayFor(modelItem => item.Product.Name)</td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+</table>
+
+<!-- Phân trang -->
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+            <a class="page-link" href="@Url.Action("Index", new { orderId = ViewBag.OrderId, page = Model.PageNumber - 1, currentFilter = ViewBag.CurrentFilter })" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+
+        @for (int i = 1; i <= Model.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Index", new { orderId = ViewBag.OrderId, page = i, currentFilter = ViewBag.CurrentFilter })">@i</a>
+            </li>
+        }
+
+        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+            <a class="page-link" href="@Url.Action("Index", new { orderId = ViewBag.OrderId, page = Model.PageNumber + 1, currentFilter = ViewBag.CurrentFilter })" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>

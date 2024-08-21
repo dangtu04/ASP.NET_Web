@@ -54,6 +54,8 @@ namespace DangThanhTu_2122110051.Controllers
 
                 db.Orderdetails.AddRange(lstOrderdetail);
                 db.SaveChanges();
+                Session["cart"] = null;
+                Session["count"] = 0;
             }
             return View();
 

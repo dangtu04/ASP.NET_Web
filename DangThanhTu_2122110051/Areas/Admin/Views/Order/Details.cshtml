@@ -1,0 +1,84 @@
+﻿@model DangThanhTu_2122110051.Context.Order
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Delivery_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Delivery_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FirstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

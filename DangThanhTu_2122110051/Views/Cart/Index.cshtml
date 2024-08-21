@@ -11,9 +11,9 @@
                     <table class="table table-borderless table-shopping-cart">
                         <thead class="text-muted">
                             <tr class="small text-uppercase">
-                                <th scope="col">Product</th>
-                                <th scope="col" width="120">Quantity</th>
-                                <th scope="col" width="120">Price</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col" width="120">Số lượng</th>
+                                <th scope="col" width="120">Giá</th>
                                 <th scope="col" class="text-right" width="200"></th>
                             </tr>
                         </thead>
@@ -46,7 +46,7 @@
                                         </td>
                                         <td class="text-right">
                                             <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                            <button class="btn btn-light btn-remove" data-id="@item.Product.Id"> Remove</button>
+                                            <button class="btn btn-light btn-remove" data-id="@item.Product.Id"> Xoá </button>
                                         </td>
                                     </tr>
                                 }
@@ -68,7 +68,7 @@
                 </div> <!-- card.// -->
 
                 <div class="alert alert-success mt-3">
-                    <p class="icontext"><i class="icon text-success fa fa-truck"></i> Free Delivery within 1-2 weeks</p>
+                    <p class="icontext"><i class="icon text-success fa fa-truck"></i> Miễn phí giao hàng</p>
                 </div>
             </main> <!-- col.// -->
             <aside class="col-md-3">
@@ -76,11 +76,11 @@
                     <div class="card-body">
                         <form>
                             <div class="form-group">
-                                <label>Have coupon?</label>
+                                <label>Mã giảm giá</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="" placeholder="Coupon code">
+                                    <input type="text" class="form-control" name="" placeholder="Mã giảm giá">
                                     <span class="input-group-append">
-                                        <button class="btn btn-primary">Apply</button>
+                                        <button class="btn btn-primary">Áp dụng</button>
                                     </span>
                                 </div>
                             </div>
@@ -90,24 +90,12 @@
                 <div class="card">
                     <div class="card-body">
                         <dl class="dlist-align">
-                            <dt>Total price:</dt>
+                            <dt>Giảm giá:</dt>
                             <dd class="text-right"></dd>
                         </dl>
+                        
                         <dl class="dlist-align">
-                            <dt>Discount:</dt>
-                            @if (Model != null && Model.Any())
-                            {
-                                <dd class="text-right">
-                                    @Model.Sum(c => c.Quantity * c.Price).ToString("#,##0") VNĐ
-                                </dd>
-                            }
-                            else
-                            {
-                                <dd class="text-right">0 VNĐ</dd>
-                            }
-                        </dl>
-                        <dl class="dlist-align">
-                            <dt>Total:</dt>
+                            <dt>Tổng cộng:</dt>
                             @if (Model != null && Model.Any())
                             {
                                 <dd class="text-right">

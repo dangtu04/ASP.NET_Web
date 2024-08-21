@@ -3,21 +3,21 @@
 <section class="section-content padding-y">
     <div class="card mx-auto" style="max-width:520px; margin-top:40px;">
         <article class="card-body">
-            <header class="mb-4"><h4 class="card-title">Sign up</h4></header>
+            <header class="mb-4"><h4 class="card-title">Đăng ký</h4></header>
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
 
                 <div class="form-row">
                     <div class="col form-group">
-                        @Html.LabelFor(model => model.FirstName, "First name")
-                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "First name" } })
+                        @Html.LabelFor(model => model.FirstName, "Họ")
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", placeholder = "Họ" } })
                         @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
                     </div>
 
                     <div class="col form-group">
-                        @Html.LabelFor(model => model.LastName, "Last name")
-                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last name" } })
+                        @Html.LabelFor(model => model.LastName, "Tên")
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = "Tên" } })
                         @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -25,39 +25,40 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.Email, "Email")
                     @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
-                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <small class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai.</small>
                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
 
                 <div class="form-group">
-                    <label>Gender</label>
+                    <label>Giới tính</label>
                     <div>
                         <label class="custom-control custom-radio custom-control-inline">
-                            @Html.RadioButtonFor(model => model.Gender, "Male", new { @class = "custom-control-input" })
-                            <span class="custom-control-label"> Male </span>
+                            @Html.RadioButtonFor(model => model.Gender, "Nam", new { @class = "custom-control-input" })
+                            <span class="custom-control-label"> Nam </span>
                         </label>
                         <label class="custom-control custom-radio custom-control-inline">
-                            @Html.RadioButtonFor(model => model.Gender, "Female", new { @class = "custom-control-input" })
-                            <span class="custom-control-label"> Female </span>
+                            @Html.RadioButtonFor(model => model.Gender, "Nữ", new { @class = "custom-control-input" })
+                            <span class="custom-control-label"> Nữ </span>
                         </label>
                     </div>
                     @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.Phone, "Phone")
-                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = "Phone" } })
+                    @Html.LabelFor(model => model.Phone, "Số điện thoại")
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = "Số điện thoại" } })
                     @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                 </div>
+
                 <div class="form-group">
-                    @Html.LabelFor(model => model.Image, "Image")
-                    @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control", placeholder = "Image" } })
+                    @Html.LabelFor(model => model.Image, "Hình ảnh")
+                    <input type="file" name="Image" class="form-control" accept="image/*" />
                     @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.Address, "Address")
-                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "Address" } })
+                    @Html.LabelFor(model => model.Address, "Địa chỉ")
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = "Địa chỉ" } })
                     @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
                 </div>
 
@@ -66,24 +67,24 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        @Html.LabelFor(model => model.Password, "Create password")
-                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+                        @Html.LabelFor(model => model.Password, "Tạo mật khẩu")
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Mật khẩu" } })
                         @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" value="Create" class="btn btn-primary btn-block"> Register </button>
+                    <button type="submit" value="Create" class="btn btn-primary btn-block"> Đăng ký </button>
                 </div>
 
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" checked="">
-                        <div class="custom-control-label"> I am agree with <a href="#">terms and conditions</a> </div>
+                        <div class="custom-control-label"> Tôi đồng ý với <a href="#">các điều khoản và điều kiện</a> </div>
                     </label>
                 </div>
             }
         </article>
     </div>
-    <p class="text-center mt-4">Have an account? <a href="#">Log In</a></p>
+    <p class="text-center mt-4">Đã có tài khoản? <a href="#">Đăng nhập</a></p>
 </section>

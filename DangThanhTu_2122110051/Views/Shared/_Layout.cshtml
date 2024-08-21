@@ -135,20 +135,20 @@
                                 <a class="dropdown-item" href="#">Đồ chơi và sở thích</a>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link" href="#">Sẵn sàng để giao</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Triển lãm thương mại</a>
+                        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Contact", "Home")">Liên hệ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dịch vụ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Bán với chúng tôi</a>
+                            <a class="nav-link" href="@Url.Action("About", "Home")">Về chúng tôi</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Trang demo</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Trang khác</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="@Url.Action("Index", "Home")">Trang chính</a>
                                 <a class="dropdown-item" href="@Url.Action("Index", "Category")">Tất cả danh mục</a>
